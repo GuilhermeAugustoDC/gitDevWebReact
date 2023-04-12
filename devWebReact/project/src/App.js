@@ -1,11 +1,11 @@
 import './App.css';
-import helloWorld from './components/HelloWorld';
+import HelloWorld from './components/HelloWorld.jsx';
 
 function App (){
   return (
-    <div>
-      <helloWorld />
+    <div className="App">
+      <HelloWorld />
     </div>
-  );
+  )
 }
 export default App;
