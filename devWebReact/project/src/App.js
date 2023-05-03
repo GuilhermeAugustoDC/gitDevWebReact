@@ -1,11 +1,12 @@
 import './App.css';
-import HelloWorld from './components/HelloWorld.jsx';
+//import YuGiOh from './components/YuGiOh.jsx'
+//import HelloWorld from './components/HelloWorld.jsx';
 
 function App (){
   return (
     <div className="App">
-      <HelloWorld />
     </div>
   )
 }
+
 export default App;
