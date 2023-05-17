@@ -1,0 +1,22 @@
+O uso do CONTEXTO para que o PROPS DRILLING não ocorra é só uma de suas várias qualidades, explicando bem resumidamente imagine uma arvore onde, o elemento PAI deseja passar um estilo, para um COMPONENTE que seja FILHO do seu FILHO, ao inves, do COMPONENTE PAI ter que passar pelo primeiro FILHO e em seguida chegar no objetivo principal, criamos um arquivo CONTEXTO que ira ter a função que de aplicar aquele efeito no seu NETO sem ter que PERFURAR 'DRILLING' todos os COMPONENTES.
+                                                                
+                                                      +-----------+                
+                                                      |    PAI    |-------------+---+
+                                                      +-----------+             |   |      
+                                                            |                   |   |
+                                                      +-----------+             |   |
+                                                      | # FILHO # |             |   |
+                                                      +-----------+             |   |
+                                                   _________|__________         |   |   
+                                                  |                    |        |   |  
+                                            +-----------+        +-----------+  |   |  
+                                            |   FILHO   |        | $ FILHO $ |<-+   |  
+                                            +-----------+        +-----------+      |
+                                                                       |            |
+                                                                 +-----------+      |
+                                                                 | * FILHO * |<-----+ 
+                                                                 +-----------+          
+
+Considerando que na arvore acima o PROPS DRINLLING esteja ocorrendo, caso PAI queira aplicar algum estilo em * FILHO * por exemplo PAI teria que sair PERFURANDO 'DRILLING' # FILHO # e $ FILHO $ para poder chegar em * FILHO *
+
+Ja considerando o uso de CONTEXTOS, PAI pode chegar em * FILHO * ou em $ FILHO $ sem PERFURAR # FILHO # 
